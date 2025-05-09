@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
+    /* General Styles */
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -20,6 +21,12 @@
       100% {background-position: 0% 50%;}
     }
 
+    html {
+      scroll-padding-top: 60px;
+      scroll-behavior: smooth;
+    }
+
+    /* Header Styles */
     header {
       background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
       color: white;
@@ -33,6 +40,7 @@
       font-size: 2.5rem;
     }
 
+    /* Navigation Styles */
     nav {
       display: flex;
       gap: 15px;
@@ -42,11 +50,6 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-    }
-
-    html {
-      scroll-padding-top: 60px;
-      scroll-behavior: smooth;
     }
 
     nav button {
@@ -64,10 +67,12 @@
       background-color: #0056b3;
     }
 
+    /* Section Styles */
     section {
       padding: 40px 30px;
     }
 
+    /* Card Styles */
     .card {
       display: inline-block;
       width: 150px;
@@ -91,6 +96,7 @@
       margin: 10px 0 0;
     }
 
+    /* Popup Styles */
     .popup {
       position: fixed;
       top: 0;
@@ -146,7 +152,71 @@
     .popup-content button:hover {
       background-color: #ddd;
     }
-    
+
+    /* Welcome Box Styles */
+    .welcome-box {
+      background-color: #ffffffcc;
+      padding: 25px;
+      margin: 30px 0;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2), 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .welcome-box h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #222;
+    }
+
+    /* Hierarchy Styles */
+    .hierarchy-container {
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: center;
+    }
+
+    .hierarchy-level {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .position-box {
+      background: #fff;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 150px;
+      text-align: center;
+    }  
+
+    .position-box h4 {
+      margin: 0 0 10px;
+      color: #333;
+    }
+
+    .name-card {
+      background: #f0f0f0;
+      padding: 8px;
+      border-radius: 5px;
+      margin: 5px 0;
+      font-size: 0.9rem;
+    }
+
+    .connector {
+      height: 20px;
+      border-left: 2px solid #ccc;
+      margin: 0 auto;
+      width: 0;
+    }
+
+    /* Leaderboard Styles */
     #leaderboard {
       max-width: 600px;
       margin: 40px auto;
@@ -210,68 +280,6 @@
       background-color: #cd7f32;
       color: #000;
     }
-
-    .welcome-box {
-      background-color: #ffffffcc;
-      padding: 25px;
-      margin: 30px 0;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2), 0 4px 12px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .welcome-box h1 {
-      margin: 0;
-      font-size: 2rem;
-      color: #222;
-    }
-    
-.hierarchy-container {
-    max-width: 800px;
-    margin: 40px auto;
-    text-align: center;
-}
-
-.hierarchy-level {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.position-box {
-    background: #fff;
-    padding: 15px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 150px;
-    text-align: center;
-}
-
-.position-box h4 {
-    margin: 0 0 10px;
-    color: #333;
-}
-
-.name-card {
-    background: #f0f0f0;
-    padding: 8px;
-    border-radius: 5px;
-    margin: 5px 0;
-    font-size: 0.9rem;
-}
-
-.connector {
-    height: 20px;
-    border-left: 2px solid #ccc;
-    margin: 0 auto;
-    width: 0;
-}
-    
   </style>
 </head>
 <body>
@@ -464,47 +472,47 @@
     </div>
   </section>
 
-<section id="class-positions">
+  <section id="class-positions">
     <h2>Class Positions</h2>
     <div class="hierarchy-container">
-        <!-- First Position (with 2 slots) -->
-        <div class="hierarchy-level">
-            <div class="position-box">
-                <h4>Ketua Kelas & Penolong Ketua Kelas</h4>
-                <div class="name-card">Amirul</div>
-                <div class="name-card">Saffa</div>
-            </div>
+      <!-- First Position (with 2 slots) -->
+      <div class="hierarchy-level">
+        <div class="position-box">
+          <h4>Ketua Kelas & Penolong Ketua Kelas</h4>
+          <div class="name-card">Amirul</div>
+          <div class="name-card">Saffa</div>
         </div>
-        <div class="connector"></div>
-        <!-- Second Position (with 6 slots) -->
-        <div class="hierarchy-level">
-            <div class="position-box">
-                <h4>Bendahari</h4>
-                <div class="name-card">Syakir</div>
-            </div>
-            <div class="position-box">
-                <h4>Bendahari 2</h4>
-                <div class="name-card">Balqis</div>
-            </div>
-            <div class="position-box">
-                <h4>Ketua Kebersihan</h4>
-                <div class="name-card">Aiman</div>
-            </div>
-            <div class="position-box">
-                <h4>P. ketua kebersihan</h4>
-                <div class="name-card">Intan</div>
-            </div>
-            <div class="position-box">
-                <h4>Ketua kecantikan kelas</h4>
-                <div class="name-card">Yoshwein</div>
-            </div>
-            <div class="position-box">
-                <h4>P. Ketua kebersihan</h4>
-                <div class="name-card">Adam Khalid</div>
-            </div>
+      </div>
+      <div class="connector"></div>
+      <!-- Second Position (with 6 slots) -->
+      <div class="hierarchy-level">
+        <div class="position-box">
+          <h4>Bendahari</h4>
+          <div class="name-card">Syakir</div>
         </div>
+        <div class="position-box">
+          <h4>Bendahari 2</h4>
+          <div class="name-card">Balqis</div>
+        </div>
+        <div class="position-box">
+          <h4>Ketua Kebersihan</h4>
+          <div class="name-card">Aiman</div>
+        </div>
+        <div class="position-box">
+          <h4>P. ketua kebersihan</h4>
+          <div class="name-card">Intan</div>
+        </div>
+        <div class="position-box">
+          <h4>Ketua kecantikan kelas</h4>
+          <div class="name-card">Yoshwein</div>
+        </div>
+        <div class="position-box">
+          <h4>P. Ketua kebersihan</h4>
+          <div class="name-card">Adam Khalid</div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
   <section id="leaderboard">
     <h2>LEADERBOARD</h2>
@@ -569,7 +577,6 @@
       document.getElementById('popup').classList.remove('show');
     }
 
-    // Close popup when clicking outside the popup content
     window.addEventListener('click', function(event) {
       const popup = document.getElementById('popup');
       if (event.target === popup) {
@@ -592,7 +599,6 @@
       currentQuote = (currentQuote + 1) % quotes.length;
       quoteText.textContent = `"${quotes[currentQuote]}"`;
     }, 5000);
-
   </script>
 </body>
 </html>
