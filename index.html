@@ -228,6 +228,50 @@
       font-size: 2rem;
       color: #222;
     }
+    
+.hierarchy-container {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.hierarchy-level {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.position-box {
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 150px;
+    text-align: center;
+}
+
+.position-box h4 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.name-card {
+    background: #f0f0f0;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.connector {
+    height: 20px;
+    border-left: 2px solid #ccc;
+    margin: 0 auto;
+    width: 0;
+}
+    
   </style>
 </head>
 <body>
@@ -420,6 +464,48 @@
     </div>
   </section>
 
+<section id="class-positions">
+    <h2>Class Positions</h2>
+    <div class="hierarchy-container">
+        <!-- First Position (with 2 slots) -->
+        <div class="hierarchy-level">
+            <div class="position-box">
+                <h4>Ketua Kelas & Penolong Ketua Kelas</h4>
+                <div class="name-card">Amirul</div>
+                <div class="name-card">Saffa</div>
+            </div>
+        </div>
+        <div class="connector"></div>
+        <!-- Second Position (with 6 slots) -->
+        <div class="hierarchy-level">
+            <div class="position-box">
+                <h4>Bendahari</h4>
+                <div class="name-card">Syakir</div>
+            </div>
+            <div class="position-box">
+                <h4>Bendahari 2</h4>
+                <div class="name-card">Balqis</div>
+            </div>
+            <div class="position-box">
+                <h4>Ketua Kebersihan</h4>
+                <div class="name-card">Aiman</div>
+            </div>
+            <div class="position-box">
+                <h4>P. ketua kebersihan</h4>
+                <div class="name-card">Intan</div>
+            </div>
+            <div class="position-box">
+                <h4>Ketua kecantikan kelas</h4>
+                <div class="name-card">Yoshwein</div>
+            </div>
+            <div class="position-box">
+                <h4>P. Ketua kebersihan</h4>
+                <div class="name-card">Adam Khalid</div>
+            </div>
+        </div>
+    </div>
+</section>
+
   <section id="leaderboard">
     <h2>LEADERBOARD</h2>
     <p>Exam Ranked</p>
@@ -506,6 +592,7 @@
       currentQuote = (currentQuote + 1) % quotes.length;
       quoteText.textContent = `"${quotes[currentQuote]}"`;
     }, 5000);
+
   </script>
 </body>
 </html>
